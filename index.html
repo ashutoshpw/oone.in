@@ -95,7 +95,7 @@
 							<p>True entrepreneur is a doer<br />
 							not a dreamer<br /></p>
 							<ul class="actions">
-								<li><a href="https://festavesta.com/oone/quick_register" class="button special">Register Now</a></li>
+								<li><a href="https://festavesta.com/oone/quick_register" class="button special" onbeforeclick="log_register(1)">Register Now</a></li>
 							</ul>
 						</div>
 						<a href="#aboutus" class="more scrolly">Learn More</a>
@@ -122,7 +122,7 @@
 								<h2>Registrations</h2>
 								<p>Registrations are open till May 19th!!</p>
                                 <ul class="actions">
-								    <li><a href="https://festavesta.com/oone/quick_register" class="button">Register Now</a></li>
+								    <li><a href="https://festavesta.com/oone/quick_register" class="button" onbeforeclick="log_register(2)">Register Now</a></li>
 								</ul>
 							</div>
 						</section>
@@ -446,6 +446,35 @@
                 ga('send', 'pageview');
 
             </script>
+		
+		<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 'your-app-id',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+		
+<script type="text/javascript">
+function log_register(a){
+	if(a==1)
+ 		FB.AppEvents.logEvent("clickRegister");
+	else if(a==2)
+		FB.AppEvents.logEvent("clickRegister2");
+		
+}	
+</script>
 
 	</body>
 </html>
