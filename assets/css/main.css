@@ -2438,6 +2438,12 @@
             .features li:nth-child(13) {
 				background-color: rgba(0, 0, 0, 0.35);
 			}
+            .features li:nth-child(14) {
+				background-color: rgba(0, 0, 0, 0.35);
+			}
+            .features li:nth-child(15) {
+				background-color: rgba(0, 0, 0, 0.35);
+			}
 
 			.features li:before {
 				display: block;
